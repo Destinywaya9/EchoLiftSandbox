@@ -1,0 +1,16 @@
+MIT License with Embargo Addendum
+
+Copyright (c) 2025 Destiny Machwaya
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to use the Software for non-commercial and observational purposes only, subject to the following conditions:
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+
+---  
+🚫 **EMBARGO CLAUSE**  
+The quantum kernel used in this project is subject to embargoed access.  
+Any attempt to reverse-engineer, replicate, or apply the kernel or its logic  
+without explicit written consent is strictly prohibited.
+
+This sandbox is for demonstration purposes only and may not reflect  
+the full capabilities of EchoLift or QCC Echo kernel integrations.
