@@ -1,1 +1,88 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EchoLift Quantum Sandbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #000814, #001d3d);
+      color: #f0f0f0;
+      margin: 0;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      color: #fddb3a;
+    }
+    .card {
+      background: #001d3d;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      box-shadow: 0 0 15px rgba(253, 219, 58, 0.2);
+    }
+    label, select, p {
+      margin: 1rem 0;
+    }
+    .plot {
+      width: 100%;
+      height: 300px;
+      background: #003566;
+      border-radius: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fddb3a;
+      font-size: 1.2rem;
+    }
+    footer {
+      margin-top: 4rem;
+      font-size: 0.8rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🛰️ EchoLift Quantum Sandbox</h1>
+    <p>Simulated interface for exploring kernel resilience under quantum noise conditions.</p><div class="card">
+  <label for="noise">Select Depolarizing Noise Level:</label>
+  <select id="noise" onchange="simulate()">
+    <option value="0.00">0.00 (Ideal)</option>
+    <option value="0.01">0.01</option>
+    <option value="0.02">0.02</option>
+    <option value="0.05">0.05</option>
+    <option value="0.1">0.10</option>
+    <option value="0.2">0.20</option>
+  </select>
 
+  <div class="plot" id="output">Coherence: 100% | Entropy: 0.000000</div>
+</div>
+
+<footer>
+  🔐 SHA-256 Reference: 3eafab11c6...<br />
+  📦 Kernel contents verified under private chain of custody.<br />
+  © EchoLift Sandbox, 2025
+</footer>
+
+  </div>  <script>
+    function simulate() {
+      const noise = parseFloat(document.getElementById("noise").value);
+      let coherence = 100.0;
+      let entropy = 0.0;
+
+      // Simulated drop-off model
+      if (noise > 0.02) {
+        coherence = (1.0 - noise) * 100;
+        entropy = noise * 1.123456; // Simulated entropy growth
+      }
+
+      document.getElementById("output").innerText =
+        `Coherence: ${coherence.toFixed(2)}% | Entropy: ${entropy.toFixed(6)}`;
+    }
+  </script></body>
+</html>
